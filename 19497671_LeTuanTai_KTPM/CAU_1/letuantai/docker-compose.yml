@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  app:
+    image: product:latest
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - mysqldb
+  mysqldb:
+    platform: linux/amd64
+    image: "mysql:5.7"
+    restart: always
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_DATABASE: chuyenbay
+      MYSQL_USER: root
+      MYSQL_PASSWORD: sapassword
+      MYSQL_ROOT_PASSWORD: sapassword
