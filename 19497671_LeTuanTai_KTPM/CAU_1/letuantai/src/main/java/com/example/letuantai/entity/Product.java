@@ -1,5 +1,6 @@
 package com.example.letuantai.entity;
 
+import java.io.Serializable;
 import java.sql.Time;
 
 import javax.persistence.Entity;
@@ -17,7 +18,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @Table(name = "product")
-public class Product {
+public class Product implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1528078250033274432L;
 	@Id
 	private String ProId;
 	private String Name;
