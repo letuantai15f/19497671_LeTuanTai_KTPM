@@ -1,5 +1,6 @@
 package com.example.letuantai;
 
+import com.example.letuantai.entity.Product;
 import com.google.gson.Gson;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.messaging.handler.annotation.SendTo;
